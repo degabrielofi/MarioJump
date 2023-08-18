@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="shortcut icon"
+      href="./assets/images/icon.png"
+      type="image/x-icon"
+    />
+    <title>Mario Jump | @degabrielofi_</title>
+  </head>
+
+  <body>
+    <div class="game-board">
+      <img src="./assets/images/mario.gif" class="mario" alt="mario" />
+      <img src="./assets/images/pipe.png" class="pipe" alt="pipe" />
+      <img src="./assets/images/clouds.png" class="clouds" alt="clouds" />
+    </div>
+    <div id="game_Over">
+      <img class="image_gameOver" src="./assets/images/game_over.png" alt="" />
+      <div id="text">
+        <b id="blue">G</b><b id="yellow">A</b><b id="red">M</b
+        ><b id="green">E</b> <b id="red">O</b><b id="green">V</b
+        ><b id="blue">E</b><b id="yellow">R</b>
+      </div>
+      <div id="caixa">
+        <br />
+        <div id="time">
+          TEMPO: <span id="minute">00</span>:<span id="second">00</span>
+        </div>
+        <br />
+      </div>
+      <div class="button">
+        <button onclick="restart()">
+          <img
+            width="32px"
+            height="32px"
+            src="./assets/images/button_mario.png"
+            alt=""
+          />
+          <span class="now">now!</span>
+          <span class="play">play</span>
+        </button>
+      </div>
+    </div>
+
+    <audio src="./assets/sounds/mario_jumping.wav" class="sound_mario"></audio>
+    <audio src="./assets/sounds/audio_theme.wav" class="theme" autoplay loop></audio>
+    <audio src="./assets/sounds/audio_gameover.wav" class="gameover"></audio>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Press Start 2P", cursive;
+}
+
+.game-board {
+  width: 100%;
+  height: 100%;
+  border: 15px solid green;
+  margin: 0 auto;
+  position: absolute;
+  overflow: hidden;
+  background: linear-gradient(#87ceeb, #e0f6ff);
+}
+
+.pipe {
+  position: absolute;
+  bottom: 0;
+  width: 80px;
+  animation: pipe-animation 1.5s infinite linear;
+}
+
+.mario {
+  width: 150px;
+  position: absolute;
+  bottom: 0;
+}
+
+.jump {
+  animation: jump 500ms ease-out;
+}
+
+.clouds {
+  top: 1rem;
+  position: absolute;
+  width: 550px;
+  animation: clouds-animation 20s infinite linear;
+}
+
+@keyframes pipe-animation {
+  from {
+    right: -80px;
+  }
+
+  to {
+    right: 100%;
+  }
+}
+
+@keyframes jump {
+  0% {
+    bottom: 0;
+  }
+
+  40% {
+    bottom: 180px;
+  }
+
+  50% {
+    bottom: 180px;
+  }
+
+  60% {
+    bottom: 180px;
+  }
+
+  100% {
+    bottom: 0;
+  }
+}
+
+@keyframes clouds-animation {
+  from {
+    right: -550px;
+  }
+
+  to {
+    right: 100%;
+  }
+}
+
+#game_Over {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.9);
+  font-size: 50px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  top: 0;
+}
+
+#game_Over .image_gameOver {
+  width: 20%;
+  margin-bottom: 1rem;
+}
+
+.button {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 20px;
+  color: white;
+  text-shadow: 2px 2px rgb(116, 116, 116);
+  text-transform: uppercase;
+  border: solid 2px black;
+  letter-spacing: 1px;
+  font-weight: 600;
+  font-size: 17px;
+  background-color: #facf07;
+  border-radius: 50px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+button:active {
+  transform: scale(0.9);
+  transition: all 100ms ease;
+}
+
+button img {
+  transition: all 0.5s ease;
+  z-index: 2;
+}
+
+.play {
+  transition: all 0.5s ease;
+  transition-delay: 300ms;
+}
+
+button:hover img {
+  transform: scale(1.5) translate(200%);
+}
+
+.now {
+  position: absolute;
+  left: 0;
+  transform: translateX(-100%);
+  transition: all 0.5s ease;
+  z-index: 2;
+}
+
+button:hover .now {
+  transform: translateX(10px);
+  transition-delay: 300ms;
+}
+
+button:hover .play {
+  transform: translateX(200%);
+  transition-delay: 300ms;
+}
+
+.Restart {
+  padding: 30px;
+  font-size: 30px;
+  color: white;
+  background-color: rgb(2, 0, 36, 0.7);
+  border: none;
+  border-radius: 10px;
+  margin-top: 10px;
+  transition: ease 0.5s;
+}
+
+.Restart:hover {
+  transition: ease 0.5s;
+  cursor: pointer;
+  padding: 40px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+#caixa {
+  font-size: 22px;
+}
+
+@media only screen and (max-width: 700px) {
+  #text {
+    text-align: center;
+    flex-wrap: wrap;
+    font-size: 2rem;
+  }
+
+  .pipe {
+    width: 50px;
+  }
+
+  .Restart {
+    padding: 30px 2px;
+  }
+
+  .Restart:hover {
+    padding: 40px 3px;
+  }
+
+  #game_Over .image_gameOver {
+    width: 50%;
+  }
+}
+
+#blue {
+  color: #0c9bd7;
+}
+
+#yellow {
+  color: #facf07;
+}
+
+#red {
+  color: #e52928;
+}
+
+#green {
+  color: #45af49;
+}
